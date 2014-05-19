@@ -1,6 +1,6 @@
 {
   "name": "react-bouncefix",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "A ReactJS component to stop elastic bouncing on body",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/bigdatr/react-bouncefix/issues"
   },
-  "homepage": "https://github.com/bigdatr/react-bouncefix"
+  "homepage": "https://github.com/bigdatr/react-bouncefix",
+  "dependencies": {
+    "envify": "^1.2.1",
+    "react": "^0.10.0"
+  }
 }
