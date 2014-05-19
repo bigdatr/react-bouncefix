@@ -32,15 +32,8 @@ var ScrollableContainer = require('react-bouncefix');
 
 var MyComponent = React.createClass({
   render: function() {
-  	// You can (and probably should) specify these in your css
-  	// file and just add the css className here instead
-  	var inline_style = {
-  		'overflow-y': 'auto',
-		'overflow-x': 'hidden';
-  	};
-
     return (
-    	<ScrollableContainer style={inline_style}>
+    	<ScrollableContainer className="ScrollableContainer">
     		Hello from MyComponent!
     	</ScrollableContainer>
     );
@@ -54,3 +47,29 @@ React.renderComponent(
 );
 
 ```
+
+
+
+Add to your css
+
+```css
+.ScrollableContainer {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+```
+
+##Parameters
+
+#####component
+By default this will be a `div`, however, you may specify any React supported element. See http://facebook.github.io/react/docs/tags-and-attributes.html#html-elements
+
+```js
+<ScrollableContainer className="ScrollableContainer" component={React.dom.ul}>
+    Hello from MyComponent!
+</ScrollableContainer>
+
+```
+
+
