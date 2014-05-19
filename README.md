@@ -25,22 +25,32 @@ IOS (since IOS 5) offers native touch scrolling within nested containers via `-w
 For documentation on how to use react, check out http://facebook.github.io/react/docs/getting-started.html
 
 
-###For projects using JSX
+####For projects using JSX
 ```js
 /** @jsx React.DOM */
 var ScrollableContainer = require('react-bouncefix');
 
-
 var MyComponent = React.createClass({
   render: function() {
-  	//You can (and probably should) specify these in your css file and just add the css className here instead
+  	// You can (and probably should) specify these in your css
+  	// file and just add the css className here instead
   	var inline_style = {
   		'overflow-y': 'auto',
 		'overflow-x': 'hidden';
   	};
 
-    return <ScrollableContainer style={inline_style}>Hello from MyComponent!</ScrollableContainer>;
+    return (
+    	<ScrollableContainer style={inline_style}>
+    		Hello from MyComponent!
+    	</ScrollableContainer>
+    );
   }
 });
+
+
+React.renderComponent(
+	MyComponent,
+	document.getElementById('container')
+);
 
 ```
