@@ -1,3 +1,5 @@
+var React = require('react');
+
 var ScrollableContainer = React.createClass({
     displayName: 'ScrollableContainer',
     propTypes: {
