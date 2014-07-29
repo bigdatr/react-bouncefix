@@ -66,7 +66,7 @@ Add to your css
 By default this will be a `div`, however, you may specify any React supported element. See http://facebook.github.io/react/docs/tags-and-attributes.html#html-elements
 
 ```js
-<ScrollableContainer className="ScrollableContainer" component={React.dom.ul}>
+<ScrollableContainer className="ScrollableContainer" component={React.DOM.ul}>
     Hello from MyComponent!
 </ScrollableContainer>
 
