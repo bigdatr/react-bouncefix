@@ -1,1 +1,1 @@
-module.exports = require('./src/ScrollableContainer');
+module.exports = require('./src/Bouncefix');

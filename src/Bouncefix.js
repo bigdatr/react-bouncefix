@@ -1,7 +1,7 @@
 var React = require('react');
 
-var ScrollableContainer = React.createClass({
-    displayName: 'ScrollableContainer',
+var Bouncefix = React.createClass({
+    displayName: 'Bouncefix',
     propTypes: {
         component: React.PropTypes.func
     },
@@ -56,4 +56,4 @@ var ScrollableContainer = React.createClass({
     }
 });
 
-module.exports = ScrollableContainer;
+module.exports = Bouncefix;

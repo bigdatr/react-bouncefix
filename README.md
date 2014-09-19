@@ -28,14 +28,14 @@ For documentation on how to use react, check out http://facebook.github.io/react
 ####For projects using JSX
 ```js
 /** @jsx React.DOM */
-var ScrollableContainer = require('react-bouncefix');
+var Bouncefix = require('react-bouncefix');
 
 var MyComponent = React.createClass({
   render: function() {
     return (
-    	<ScrollableContainer className="ScrollableContainer">
+    	<Bouncefix className="Bouncefix">
     		Hello from MyComponent!
-    	</ScrollableContainer>
+    	</Bouncefix>
     );
   }
 });
@@ -53,9 +53,10 @@ React.renderComponent(
 Add to your css
 
 ```css
-.ScrollableContainer {
+.Bouncefix {
 	overflow-y: auto;
 	overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 ```
@@ -66,9 +67,9 @@ Add to your css
 By default this will be a `div`, however, you may specify any React supported element. See http://facebook.github.io/react/docs/tags-and-attributes.html#html-elements
 
 ```js
-<ScrollableContainer className="ScrollableContainer" component={React.DOM.ul}>
+<Bouncefix className="Bouncefix" component={React.DOM.ul}>
     Hello from MyComponent!
-</ScrollableContainer>
+</Bouncefix>
 
 ```
 
