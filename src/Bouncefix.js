@@ -1,5 +1,7 @@
 var React = require('react');
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var Bouncefix = React.createClass({
     displayName: 'Bouncefix',
     propTypes: {
@@ -47,12 +49,12 @@ var Bouncefix = React.createClass({
         this._blockTouchMove = false;
     },
     render: function() {
-        return this.transferPropsTo(this.props.component({
+        return this.props.component(_extends({}, this.props, {
             onTouchStart: this.onTouchStart,
             onTouchMove: this.onTouchMove,
             onTouchEnd: this.onTouchEnd,
             onTouchCancel: this.onTouchEnd
-        }, this.props.children));
+      }), this.props.children);
     }
 });
 
