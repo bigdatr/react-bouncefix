@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/bigdatr/react-bouncefix",
   "dependencies": {
-    "react": "*"
+    "react": "^0.12.2"
   }
 }
