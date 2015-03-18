@@ -1,15 +1,13 @@
 var React = require('react');
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var Bouncefix = React.createClass({
     displayName: 'Bouncefix',
     propTypes: {
-        component: React.PropTypes.func
+        componentClass: React.PropTypes.node
     },
     getDefaultProps: function() {
         return {
-            component: React.DOM.div
+            componentClass: 'div'
         };
     },
     scrollToEnd: function(el) {
@@ -28,7 +26,7 @@ var Bouncefix = React.createClass({
     onTouchStart: function(e) {
         var el = this.getDOMNode();
         var isScrollable = el.scrollHeight > el.offsetHeight;
-        
+
         // If scrollable, adjust
         if (isScrollable) {
             this._blockTouchMove = false;
@@ -49,7 +47,7 @@ var Bouncefix = React.createClass({
         this._blockTouchMove = false;
     },
     render: function() {
-        return this.props.component(_extends({}, this.props, {
+      return React.createElement(this.props.componentClass, React.__spread({}, this.props, {
             onTouchStart: this.onTouchStart,
             onTouchMove: this.onTouchMove,
             onTouchEnd: this.onTouchEnd,
