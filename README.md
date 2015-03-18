@@ -67,7 +67,7 @@ Add to your css
 By default this will be a `div`, however, you may specify any React supported element. See http://facebook.github.io/react/docs/tags-and-attributes.html#html-elements
 
 ```js
-<Bouncefix className="Bouncefix" component={React.DOM.ul}>
+<Bouncefix className="Bouncefix" componentClass="ul">
     Hello from MyComponent!
 </Bouncefix>
 
