@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var assign = require('object-assign');
 
 var Bouncefix = React.createClass({
     displayName: 'Bouncefix',
@@ -48,7 +49,7 @@ var Bouncefix = React.createClass({
         this._blockTouchMove = false;
     },
     render: function() {
-      return React.createElement(this.props.componentClass, Object.assign({}, this.props, {
+      return React.createElement(this.props.componentClass, assign({}, this.props, {
             onTouchStart: this.onTouchStart,
             onTouchMove: this.onTouchMove,
             onTouchEnd: this.onTouchEnd,
