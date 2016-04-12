@@ -16,6 +16,9 @@
     "url": "https://github.com/bigdatr/react-bouncefix/issues"
   },
   "homepage": "https://github.com/bigdatr/react-bouncefix",
+  "devDependencies": {
+    "object-assign": "^4.0.1"
+  },
   "peerDependencies": {
     "react": ">=0.12.2"
   }

@@ -1,4 +1,6 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
+var assign = require('object-assign');
 
 var Bouncefix = React.createClass({
     displayName: 'Bouncefix',
@@ -24,7 +26,7 @@ var Bouncefix = React.createClass({
         }
     },
     onTouchStart: function(e) {
-        var el = this.getDOMNode();
+        var el = ReactDOM.findDOMNode(this);
         var isScrollable = el.scrollHeight > el.offsetHeight;
 
         // If scrollable, adjust
@@ -47,7 +49,7 @@ var Bouncefix = React.createClass({
         this._blockTouchMove = false;
     },
     render: function() {
-      return React.createElement(this.props.componentClass, React.__spread({}, this.props, {
+      return React.createElement(this.props.componentClass, assign({}, this.props, {
             onTouchStart: this.onTouchStart,
             onTouchMove: this.onTouchMove,
             onTouchEnd: this.onTouchEnd,
