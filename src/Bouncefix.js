@@ -49,12 +49,15 @@ var Bouncefix = React.createClass({
         this._blockTouchMove = false;
     },
     render: function() {
-      return React.createElement(this.props.componentClass, assign({}, this.props, {
-            onTouchStart: this.onTouchStart,
-            onTouchMove: this.onTouchMove,
-            onTouchEnd: this.onTouchEnd,
-            onTouchCancel: this.onTouchEnd
-      }), this.props.children);
+      var props = assign({}, this.props, {
+        onTouchStart: this.onTouchStart,
+        onTouchMove: this.onTouchMove,
+        onTouchEnd: this.onTouchEnd,
+        onTouchCancel: this.onTouchEnd
+      });
+      delete props.componentClass;
+      
+      return React.createElement(this.props.componentClass, props, this.props.children);
     }
 });
 
