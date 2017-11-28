@@ -1,11 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var PropTypes = require('prop-types');
+var createClass = require('create-react-class');
 var assign = require('object-assign');
 
-var Bouncefix = React.createClass({
+var Bouncefix = createClass({
     displayName: 'Bouncefix',
     propTypes: {
-        componentClass: React.PropTypes.node
+        componentClass: PropTypes.node
     },
     getDefaultProps: function() {
         return {
